@@ -1,11 +1,3 @@
-
-
-
-"""
-From a level-order representation of a binary tree, to 
-a tree object.
-"""
-
 from collections import deque
 
 class TreeNode:
@@ -14,6 +6,10 @@ class TreeNode:
         self.left = left
         self.right = right
     
+    """
+    From a level-order representation of a binary tree, to 
+    a tree object.
+    """
     def lor2tree(lor):
         if not lor:
             return None
@@ -40,6 +36,7 @@ class TreeNode:
 
 
 if __name__ == "__main__":
-    arr = [1,2,3,4,None,2,4,None,None,4]
-    root = TreeNode.lor2tree(arr)
+    lor_arr = [1,2,3,4,None,2,4,None,None,4]
+    root = TreeNode.lor2tree(lor_arr)
+    print(root.right.left.right)
     
